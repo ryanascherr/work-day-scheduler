@@ -14,9 +14,9 @@ var actualNumber = [];
         actualNumber[i] = parseInt(numberString[i]);
         if (currentTimeNumber > actualNumber[i]) {
             timeBlock[i].classList.add("past");
-        } else if (currentTimeNumber = actualNumber[i]) {
+        } else if (currentTimeNumber === actualNumber[i]) {
             timeBlock[i].classList.add("present");
-        } else if (currentTimeNumber < actualNumber[i]){
+        } else {
             timeBlock[i].classList.add("future");
         }
     }
