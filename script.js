@@ -12,6 +12,9 @@ $(document).ready(function () {
     
     displayDate();
 
+    var currentTime = moment().format("H");
+    console.log(currentTime);
+
 
 
 
