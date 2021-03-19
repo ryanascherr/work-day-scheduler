@@ -1,5 +1,6 @@
 var day;
 var dayOfSave;
+var allTextAreas = document.querySelectorAll(".description");
 
 function displayDate() {
     document.getElementById("date").textContent = moment().format("MMMM Do YYYY, h:mm:ss a");
@@ -68,6 +69,10 @@ function initialize() {
     styleTimeBlocks();
     displayText();
 }
+
+document.querySelector(".btn-danger").addEventListener("click", function(){
+    localStorage.clear();
+})
 
 document.getElementById("hour-nine-button").addEventListener("click", function(){
     localStorage.setItem("hour-nine-timeblock-text", document.getElementById("hour-nine-text-area").value);
