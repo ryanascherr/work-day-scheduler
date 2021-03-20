@@ -24,4 +24,4 @@ Jeff DeRosalia, Dan Rosenbaum
 
 ## Link
 
-https://ryanascherr.github.io/quiz/
+https://ryanascherr.github.io/work-day-scheduler/
