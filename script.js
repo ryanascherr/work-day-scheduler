@@ -70,15 +70,31 @@ function initialize() {
     displayText();
 }
 
-document.querySelector(".btn-danger").addEventListener("click", function(){
+$(".btn-danger").click(function(){
+    for (i = 0; i < allTextAreas; i++) {
+        allTextAreas[i].val("");
+    }
     localStorage.clear();
 })
 
+/*document.querySelector(".btn-danger").addEventListener("click", function(){
+    for (i = 0; i < allTextAreas; i++) {
+        allTextAreas[i].value = "";
+    }
+    localStorage.clear();
+})*/
+
+$("#hour-nine-button").click(function(){
+    localStorage.setItem("hour-nine-timeblock-text", $("#hour-nine-text-area").val());
+    day = moment().format("MMMM Do");
+    localStorage.setItem("day", day);
+})
+/*
 document.getElementById("hour-nine-button").addEventListener("click", function(){
     localStorage.setItem("hour-nine-timeblock-text", document.getElementById("hour-nine-text-area").value);
     day = moment().format("MMMM Do");
     localStorage.setItem("day", day);
-})
+})*/
 
 document.getElementById("hour-ten-button").addEventListener("click", function(){
     localStorage.setItem("hour-ten-timeblock-text", document.getElementById("hour-ten-text-area").value);
