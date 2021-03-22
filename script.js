@@ -1,6 +1,5 @@
 var day;
 var dayOfSave;
-var allTextAreas = document.querySelectorAll(".description");
 
 function displayDate() {
     document.getElementById("date").textContent = moment().format("MMMM Do YYYY, h:mm:ss a");
@@ -42,23 +41,23 @@ function displayText() {
     dayOfSave = localStorage.getItem("day");
     if (moment().format("MMMM Do") === dayOfSave) {
     var hourNineLocalText = localStorage.getItem("hour-nine-timeblock-text");
-    document.getElementById("hour-nine-text-area").value = hourNineLocalText;
+    $("#hour-nine-text-area").val(hourNineLocalText);
     var hourTenLocalText = localStorage.getItem("hour-ten-timeblock-text");
-    document.getElementById("hour-ten-text-area").value = hourTenLocalText;
+    $("#hour-ten-text-area").val(hourTenLocalText);
     var hourElevenLocalText = localStorage.getItem("hour-eleven-timeblock-text");
-    document.getElementById("hour-eleven-text-area").value = hourElevenLocalText;
+    $("#hour-eleven-text-area").val(hourElevenLocalText);
     var hourTwelveLocalText = localStorage.getItem("hour-twelve-timeblock-text");
-    document.getElementById("hour-twelve-text-area").value = hourTwelveLocalText;
+    $("#hour-twelve-text-area").val(hourTwelveLocalText);
     var hourThirteenLocalText = localStorage.getItem("hour-thirteen-timeblock-text");
-    document.getElementById("hour-thirteen-text-area").value = hourThirteenLocalText;
+    $("#hour-thirteen-text-area").val(hourThirteenLocalText);
     var hourFourteenLocalText = localStorage.getItem("hour-fourteen-timeblock-text");
-    document.getElementById("hour-fourteen-text-area").value = hourFourteenLocalText;
+    $("#hour-fourteen-text-area").val(hourFourteenLocalText);
     var hourFifteenLocalText = localStorage.getItem("hour-fifteen-timeblock-text");
-    document.getElementById("hour-fifteen-text-area").value = hourFifteenLocalText;
+    $("#hour-fifteen-text-area").val(hourFifteenLocalText);
     var hourSixteenLocalText = localStorage.getItem("hour-sixteen-timeblock-text");
-    document.getElementById("hour-sixteen-text-area").value = hourSixteenLocalText;
+    $("#hour-sixteen-text-area").val(hourSixteenLocalText);
     var hourSeventeenLocalText = localStorage.getItem("hour-seventeen-timeblock-text");
-    document.getElementById("hour-seventeen-text-area").value = hourSeventeenLocalText;
+    $("#hour-seventeen-text-area").val(hourSeventeenLocalText);
     } else {
     localStorage.clear();
     }
@@ -71,75 +70,59 @@ function initialize() {
 }
 
 $(".btn-danger").click(function(){
-    for (i = 0; i < allTextAreas; i++) {
-        allTextAreas[i].val("");
-    }
     localStorage.clear();
 })
-
-/*document.querySelector(".btn-danger").addEventListener("click", function(){
-    for (i = 0; i < allTextAreas; i++) {
-        allTextAreas[i].value = "";
-    }
-    localStorage.clear();
-})*/
 
 $("#hour-nine-button").click(function(){
     localStorage.setItem("hour-nine-timeblock-text", $("#hour-nine-text-area").val());
     day = moment().format("MMMM Do");
     localStorage.setItem("day", day);
 })
-/*
-document.getElementById("hour-nine-button").addEventListener("click", function(){
-    localStorage.setItem("hour-nine-timeblock-text", document.getElementById("hour-nine-text-area").value);
-    day = moment().format("MMMM Do");
-    localStorage.setItem("day", day);
-})*/
 
-document.getElementById("hour-ten-button").addEventListener("click", function(){
-    localStorage.setItem("hour-ten-timeblock-text", document.getElementById("hour-ten-text-area").value);
+$("#hour-ten-button").click(function(){
+    localStorage.setItem("hour-ten-timeblock-text", $("#hour-ten-text-area").val());
     day = moment().format("MMMM Do");
     localStorage.setItem("day", day);
 })
 
-document.getElementById("hour-eleven-button").addEventListener("click", function(){
-    localStorage.setItem("hour-eleven-timeblock-text", document.getElementById("hour-eleven-text-area").value);
+$("#hour-eleven-button").click(function(){
+    localStorage.setItem("hour-eleven-timeblock-text", $("#hour-eleven-text-area").val());
     day = moment().format("MMMM Do");
     localStorage.setItem("day", day);
 })
 
-document.getElementById("hour-twelve-button").addEventListener("click", function(){
-    localStorage.setItem("hour-twelve-timeblock-text", document.getElementById("hour-twelve-text-area").value);
+$("#hour-twelve-button").click(function(){
+    localStorage.setItem("hour-twelve-timeblock-text", $("#hour-twelve-text-area").val());
     day = moment().format("MMMM Do");
     localStorage.setItem("day", day);
 })
 
-document.getElementById("hour-thirteen-button").addEventListener("click", function(){
-    localStorage.setItem("hour-thirteen-timeblock-text", document.getElementById("hour-thirteen-text-area").value);
+$("#hour-thirteen-button").click(function(){
+    localStorage.setItem("hour-thirteen-timeblock-text", $("#hour-thirteen-text-area").val());
     day = moment().format("MMMM Do");
     localStorage.setItem("day", day);
 })
 
-document.getElementById("hour-fourteen-button").addEventListener("click", function(){
-    localStorage.setItem("hour-fourteen-timeblock-text", document.getElementById("hour-fourteen-text-area").value);
+$("#hour-fourteen-button").click(function(){
+    localStorage.setItem("hour-fourteen-timeblock-text", $("#hour-fourteen-text-area").val());
     day = moment().format("MMMM Do");
     localStorage.setItem("day", day);
 })
 
-document.getElementById("hour-fifteen-button").addEventListener("click", function(){
-    localStorage.setItem("hour-fifteen-timeblock-text", document.getElementById("hour-fifteen-text-area").value);
+$("#hour-fifteen-button").click(function(){
+    localStorage.setItem("hour-fifteen-timeblock-text", $("#hour-fifteen-text-area").val());
     day = moment().format("MMMM Do");
     localStorage.setItem("day", day);
 })
 
-document.getElementById("hour-sixteen-button").addEventListener("click", function(){
-    localStorage.setItem("hour-sixteen-timeblock-text", document.getElementById("hour-sixteen-text-area").value);
+$("#hour-sixteen-button").click(function(){
+    localStorage.setItem("hour-sixteen-timeblock-text", $("#hour-sixteen-text-area").val());
     day = moment().format("MMMM Do");
     localStorage.setItem("day", day);
 })
 
-document.getElementById("hour-seventeen-button").addEventListener("click", function(){
-    localStorage.setItem("hour-seventeen-timeblock-text", document.getElementById("hour-seventeen-text-area").value);
+$("#hour-seventeen-button").click(function(){
+    localStorage.setItem("hour-seventeen-timeblock-text", $("#hour-seventeen-text-area").val());
     day = moment().format("MMMM Do");
     localStorage.setItem("day", day);
 })
