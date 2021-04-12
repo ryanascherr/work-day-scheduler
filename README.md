@@ -18,6 +18,10 @@ Users can click into any of the 9 time blocks to enter an event, where they can 
 
 While this page has no break points, its simple design will display nicely across tablet sizes and above.
 
+## Technologies Used
+
+HTML, CSS, JS, JQuery, Bootstrap
+
 ## Credits
 
 Jeff DeRosalia, Dan Rosenbaum
@@ -25,3 +29,7 @@ Jeff DeRosalia, Dan Rosenbaum
 ## Link
 
 https://ryanascherr.github.io/work-day-scheduler/
+
+## Contact Information
+
+ryanascherr@gmail.com
